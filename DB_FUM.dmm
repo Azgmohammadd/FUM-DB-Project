@@ -1,0 +1,1087 @@
+{
+	"tables": {
+		"10c7b9ec-d8a3-4916-9091-6498353612d0": {
+			"id": "10c7b9ec-d8a3-4916-9091-6498353612d0",
+			"visible": true,
+			"name": "Books",
+			"desc": "کتاب ها",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "9ca51501-2096-499c-b993-df50ec6f8a7d",
+					"name": "ISBN",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "کد کتاب",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "1a4b8f46-b866-4887-bc5c-f8c72d8dbd86",
+					"name": "Title",
+					"datatype": "VARBINARY",
+					"param": "10",
+					"pk": false,
+					"nn": true,
+					"comment": "عنوان کتاب",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "1f06662c-f7c7-49ab-a38b-dd07b3d27e05",
+					"name": "Page",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "تعداد صفحات",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "5f6a6446-5915-4c16-8f81-08336d36cb79",
+					"name": "Price",
+					"datatype": "DECIMAL",
+					"param": "15, 0",
+					"pk": false,
+					"nn": true,
+					"comment": "قیمت کتاب",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "7acd7b15-90d5-4412-904a-ab75c11c2796",
+					"name": "EditNO",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "شماره ویرایش",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "24cb0b96-0365-47c1-a73d-1659032502e0",
+					"name": "PrintNO",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "نوبت چاپ",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "bdaa9a0c-38db-4e38-b72b-402be8d8418c",
+					"name": "GroupID",
+					"datatype": "VARCHAR",
+					"param": "6",
+					"pk": true,
+					"nn": true,
+					"comment": "کد گروه کتاب",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": "",
+					"fk": true
+				}
+			],
+			"relations": [
+				"8d4ae3ce-6070-4ea1-b79a-b3f9c5ff1c47",
+				"95814d69-1564-4d5b-98a7-5c50cbfbce29",
+				"1a3906c0-da0a-4019-b7a8-3cb5a70da0fa"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "b151651f-69c2-4ffb-8b0e-1902473c2dfa",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "d91facec-193c-4a98-8658-91f5ab7501ea",
+							"colid": "9ca51501-2096-499c-b993-df50ec6f8a7d"
+						},
+						{
+							"id": "766500d0-0c29-4564-a57c-e912860fdf2d",
+							"colid": "bdaa9a0c-38db-4e38-b72b-402be8d8418c"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"tabletype": "na",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na"
+		},
+		"f40ee555-c17f-43fc-b053-38c53cf4f55c": {
+			"id": "f40ee555-c17f-43fc-b053-38c53cf4f55c",
+			"visible": true,
+			"name": "GroupBook",
+			"desc": "گروه کتاب",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "cd4b8a43-3c3e-488d-8a52-2c3f5e140ca9",
+					"name": "GroupID",
+					"datatype": "VARCHAR",
+					"param": "6",
+					"pk": true,
+					"nn": true,
+					"comment": "کد گروه کتاب",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "b2811387-d85f-4493-bb89-d0b7b8b8fe93",
+					"name": "GroupName",
+					"datatype": "VARCHAR",
+					"param": "30",
+					"pk": false,
+					"nn": true,
+					"comment": "نام گروه کتاب",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				}
+			],
+			"relations": [
+				"8d4ae3ce-6070-4ea1-b79a-b3f9c5ff1c47"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "fe7adbd7-7ea6-4f73-82dc-d689b306ba47",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "f8334e9b-c43e-48b1-b9d9-b46609933834",
+							"colid": "cd4b8a43-3c3e-488d-8a52-2c3f5e140ca9"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"tabletype": "na",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na"
+		},
+		"f7bcb13d-2eda-447f-9933-a434bc6ae7a6": {
+			"id": "f7bcb13d-2eda-447f-9933-a434bc6ae7a6",
+			"visible": true,
+			"name": "Publishers",
+			"desc": "ناشران",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "14753f9f-b695-43bf-81c6-78fb2c553404",
+					"name": "pubID",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "کد ناشر",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "e99335e4-fa91-4f7b-97df-f381e2a50915",
+					"name": "pName",
+					"datatype": "VARCHAR",
+					"param": "50",
+					"pk": false,
+					"nn": true,
+					"comment": "نام ناشر",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "477f6c5f-ac90-4a68-90e0-01bc21eb2d2e",
+					"name": "Tel",
+					"datatype": "VARCHAR",
+					"param": "15",
+					"pk": false,
+					"nn": false,
+					"comment": "شماره تلفن ناشر",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "33d69df3-61e3-4b16-b14b-ffd6bb5fedc0",
+					"name": "URL",
+					"datatype": "VARCHAR",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "آدرس وب سایت نشار",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "d756845e-b3de-416c-b557-7a004f01b00f",
+					"name": "CityName",
+					"datatype": "VARCHAR",
+					"param": "50",
+					"pk": false,
+					"nn": false,
+					"comment": "نام شهر ناشر",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "400827e5-a832-4b8a-8a1d-c684edea14c6",
+					"name": "bFname",
+					"datatype": "VARCHAR",
+					"param": "20",
+					"pk": false,
+					"nn": true,
+					"comment": "نام مدیر انتشارات",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "7bc9899b-4679-4375-b7cf-f42390a6959a",
+					"name": "bLname",
+					"datatype": "VARCHAR",
+					"param": "20",
+					"pk": false,
+					"nn": true,
+					"comment": "نام خانوادگی مدیر انتشارات",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "e7296891-4063-44fd-a2b7-f6fbc815f1b8",
+					"name": "CountBookPrint",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "تعداد کتاب های چاپ شده",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				}
+			],
+			"relations": [
+				"3c4c31be-0425-4a1f-bd21-dadb1dbdff2f"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "474bf409-4662-4be4-84dc-22cf438f9abd",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "86673371-ae63-4d40-8de8-4e37328e7ab3",
+							"colid": "14753f9f-b695-43bf-81c6-78fb2c553404"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"tabletype": "na",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na"
+		},
+		"e8c18e26-06f4-4f6e-bf9c-ce268d193796": {
+			"id": "e8c18e26-06f4-4f6e-bf9c-ce268d193796",
+			"visible": true,
+			"name": "Authors",
+			"desc": "مؤلفان",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "5f1ddc8b-f970-40b8-88f3-d00a029b4ddf",
+					"name": "atID",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "کد مؤلف",
+					"defaultvalue": "",
+					"data": ""
+				},
+				{
+					"id": "48ece5b4-8f88-44b1-af51-7cb14b55578c",
+					"name": "aFname",
+					"datatype": "VARCHAR",
+					"param": "20",
+					"pk": false,
+					"nn": true,
+					"comment": "نام مؤلف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "bbc26948-decb-492c-83b3-49e15c2ad9c6",
+					"name": "aLname",
+					"datatype": "VARCHAR",
+					"param": "20",
+					"pk": false,
+					"nn": true,
+					"comment": "نام خانوادگی مؤلف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "094359fd-8c76-4809-972b-d90193669d6f",
+					"name": "Age",
+					"datatype": "INT",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "سن مؤلف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "3f8de1eb-41ed-47c9-a7f9-0503c5cfffac",
+					"name": "Ranking",
+					"datatype": "VARCHAR",
+					"param": "30",
+					"pk": false,
+					"nn": false,
+					"comment": "مدرک مؤلف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "1dcdb18f-95d7-4f85-82f4-d71dcbe1c7df",
+					"name": "Email",
+					"datatype": "VARCHAR",
+					"param": "50",
+					"pk": false,
+					"nn": false,
+					"comment": "پست الکترونیک مؤلف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "0c679424-9c83-426c-88e0-bf23eb29e34b",
+					"name": "Mobile",
+					"datatype": "VARCHAR",
+					"param": "15",
+					"pk": false,
+					"nn": false,
+					"comment": "موبایل مؤلف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "14c9f60a-a096-4db8-937f-245b9e32ecba",
+					"name": "Sumpayment",
+					"datatype": "DECIMAL",
+					"param": "18,0",
+					"pk": false,
+					"nn": false,
+					"comment": "مجموع حق تألیف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				}
+			],
+			"relations": [
+				"e49a7775-28b0-4759-a76e-7132511be364"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "a6d5318f-bcd6-441b-ae63-e7d0401dcfe3",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "8ed36868-8eac-4528-b7e5-5085982faf8f",
+							"colid": "5f1ddc8b-f970-40b8-88f3-d00a029b4ddf"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"tabletype": "na",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na"
+		},
+		"17f1c4e0-55b1-470a-aac1-24212729e674": {
+			"id": "17f1c4e0-55b1-470a-aac1-24212729e674",
+			"visible": true,
+			"name": "AuthBook",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "6991f3cf-fe27-414c-9467-6cc253262aac",
+					"name": "ISBN",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "کد کتاب",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
+				},
+				{
+					"id": "6293f4b2-89b2-4f2a-9841-a332d4fcabf0",
+					"name": "atID",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "کد مولف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": "",
+					"fk": true
+				},
+				{
+					"id": "621f6862-b1e1-44ac-a756-f6d59c3e969a",
+					"name": "payment",
+					"datatype": "DECIMAL",
+					"param": "18,0",
+					"pk": false,
+					"nn": false,
+					"comment": "حق تالیف",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				}
+			],
+			"relations": [
+				"95814d69-1564-4d5b-98a7-5c50cbfbce29",
+				"e49a7775-28b0-4759-a76e-7132511be364"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "8d195df9-b24d-4bc5-8209-14cbde7c8ab7",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "afee9aef-8aff-430e-bdf2-ee5d828a8232",
+							"colid": "6991f3cf-fe27-414c-9467-6cc253262aac"
+						},
+						{
+							"id": "b966883d-4fa5-4357-91ff-3b3cdfc1ffc6",
+							"colid": "6293f4b2-89b2-4f2a-9841-a332d4fcabf0"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"tabletype": "na",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na"
+		},
+		"81ff3803-2825-4795-ba8b-5060eb0f03ec": {
+			"id": "81ff3803-2825-4795-ba8b-5060eb0f03ec",
+			"visible": true,
+			"name": "PubBook",
+			"desc": "کتاب های نشر یافته",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "6cff0fae-5dbd-4c15-b6b4-30aff3b9a2fa",
+					"name": "ISBN",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"fk": true
+				},
+				{
+					"id": "7bda63a3-b9ae-49cd-94f7-1698293b54e8",
+					"name": "PubID",
+					"datatype": "VARCHAR",
+					"param": "10",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": "",
+					"fk": true
+				},
+				{
+					"id": "08c14ee9-85ff-4c66-9365-5c3a31b077a7",
+					"name": "PubDate",
+					"datatype": "VARCHAR",
+					"param": "8",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				},
+				{
+					"id": "cd22673c-75f9-4805-b207-d635baed438c",
+					"name": "Payment",
+					"datatype": "DECIMAL",
+					"param": "18, 0",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"autoinc": false,
+					"collation": null,
+					"charset": null,
+					"binary": false,
+					"zerofill": false,
+					"unsigned": false,
+					"enum": "",
+					"after": ""
+				}
+			],
+			"relations": [
+				"1a3906c0-da0a-4019-b7a8-3cb5a70da0fa",
+				"3c4c31be-0425-4a1f-bd21-dadb1dbdff2f"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "716ce19e-0701-4e32-a65a-a12b4c97f533",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": [
+						{
+							"id": "2e9f0685-0bad-453b-b747-c3b2d88cb4c1",
+							"colid": "6cff0fae-5dbd-4c15-b6b4-30aff3b9a2fa"
+						},
+						{
+							"id": "333ab1bd-10f3-4a22-a4c3-83bc2c6e0a93",
+							"colid": "7bda63a3-b9ae-49cd-94f7-1698293b54e8"
+						}
+					]
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": "",
+			"tabletype": "na",
+			"collation": "",
+			"charset": "",
+			"rowformat": "na"
+		}
+	},
+	"relations": {
+		"8d4ae3ce-6070-4ea1-b79a-b3f9c5ff1c47": {
+			"id": "8d4ae3ce-6070-4ea1-b79a-b3f9c5ff1c47",
+			"visible": true,
+			"name": "GroupBook_Books",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "fe7adbd7-7ea6-4f73-82dc-d689b306ba47",
+			"parent": "f40ee555-c17f-43fc-b053-38c53cf4f55c",
+			"child": "10c7b9ec-d8a3-4916-9091-6498353612d0",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "0b0d049e-447e-4ae2-9df1-c83fc1d9b61f",
+					"parentcol": "cd4b8a43-3c3e-488d-8a52-2c3f5e140ca9",
+					"childcol": "bdaa9a0c-38db-4e38-b72b-402be8d8418c"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"95814d69-1564-4d5b-98a7-5c50cbfbce29": {
+			"id": "95814d69-1564-4d5b-98a7-5c50cbfbce29",
+			"visible": true,
+			"name": "Books_AuthBook",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b151651f-69c2-4ffb-8b0e-1902473c2dfa",
+			"parent": "10c7b9ec-d8a3-4916-9091-6498353612d0",
+			"child": "17f1c4e0-55b1-470a-aac1-24212729e674",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b296c722-01a3-4753-930f-c430d79c5af3",
+					"parentcol": "9ca51501-2096-499c-b993-df50ec6f8a7d",
+					"childcol": "6991f3cf-fe27-414c-9467-6cc253262aac"
+				},
+				{
+					"id": "201f105c-6989-4843-93e5-76dd76e1c1fd",
+					"parentcol": "bdaa9a0c-38db-4e38-b72b-402be8d8418c",
+					"childcol": "6991f3cf-fe27-414c-9467-6cc253262aac"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"e49a7775-28b0-4759-a76e-7132511be364": {
+			"id": "e49a7775-28b0-4759-a76e-7132511be364",
+			"visible": true,
+			"name": "Authors_AuthBook",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "a6d5318f-bcd6-441b-ae63-e7d0401dcfe3",
+			"parent": "e8c18e26-06f4-4f6e-bf9c-ce268d193796",
+			"child": "17f1c4e0-55b1-470a-aac1-24212729e674",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "54cd8888-9f9b-4a77-ab42-adc9aa014354",
+					"parentcol": "5f1ddc8b-f970-40b8-88f3-d00a029b4ddf",
+					"childcol": "6293f4b2-89b2-4f2a-9841-a332d4fcabf0"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"1a3906c0-da0a-4019-b7a8-3cb5a70da0fa": {
+			"id": "1a3906c0-da0a-4019-b7a8-3cb5a70da0fa",
+			"visible": true,
+			"name": "Books_PubBook",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "b151651f-69c2-4ffb-8b0e-1902473c2dfa",
+			"parent": "10c7b9ec-d8a3-4916-9091-6498353612d0",
+			"child": "81ff3803-2825-4795-ba8b-5060eb0f03ec",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "2e8a4a62-d1ae-4a88-b4c0-a535da02a68b",
+					"parentcol": "9ca51501-2096-499c-b993-df50ec6f8a7d",
+					"childcol": "6cff0fae-5dbd-4c15-b6b4-30aff3b9a2fa"
+				},
+				{
+					"id": "d14ec97e-368c-4585-8ecf-c478e44db89d",
+					"parentcol": "bdaa9a0c-38db-4e38-b72b-402be8d8418c",
+					"childcol": "6cff0fae-5dbd-4c15-b6b4-30aff3b9a2fa"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"3c4c31be-0425-4a1f-bd21-dadb1dbdff2f": {
+			"id": "3c4c31be-0425-4a1f-bd21-dadb1dbdff2f",
+			"visible": true,
+			"name": "Publishers_PubBook",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "474bf409-4662-4be4-84dc-22cf438f9abd",
+			"parent": "f7bcb13d-2eda-447f-9933-a434bc6ae7a6",
+			"child": "81ff3803-2825-4795-ba8b-5060eb0f03ec",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "91879c56-a5e8-41bd-be25-bb47f6610c71",
+					"parentcol": "14753f9f-b695-43bf-81c6-78fb2c553404",
+					"childcol": "7bda63a3-b9ae-49cd-94f7-1698293b54e8"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "DB-FUM",
+		"id": "c115c304-d817-4e20-8041-c08a653139ef",
+		"activeDiagram": "2764ee25-e210-4d50-a91e-baca97ffa2b8",
+		"desc": "",
+		"path": "",
+		"type": "MYSQL",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 4,
+			"minor": 6,
+			"extra": 0
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"stickyParentIsDisplayed": false,
+		"def_tabletype": "na",
+		"def_collation": "",
+		"def_charset": "",
+		"def_coltopk": true,
+		"def_rowformat": "na",
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": "//",
+			"keywordCase": "upper",
+			"identiferCase": "original",
+			"includeSchema": "always",
+			"quotation": "if_needed"
+		},
+		"lastSaved": "Mon May 16 2022 12:12:24 GMT+0430 (Iran Daylight Time)"
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"2764ee25-e210-4d50-a91e-baca97ffa2b8": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "2764ee25-e210-4d50-a91e-baca97ffa2b8",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "transparent",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"10c7b9ec-d8a3-4916-9091-6498353612d0": {
+					"referencedItemId": "10c7b9ec-d8a3-4916-9091-6498353612d0",
+					"x": 119,
+					"y": 41,
+					"gHeight": 172,
+					"gWidth": 284,
+					"color": "#000000",
+					"background": "#ff9800",
+					"resized": true,
+					"autoExpand": true
+				},
+				"f40ee555-c17f-43fc-b053-38c53cf4f55c": {
+					"referencedItemId": "f40ee555-c17f-43fc-b053-38c53cf4f55c",
+					"x": 624,
+					"y": 30,
+					"gHeight": 63,
+					"gWidth": 242,
+					"color": "#000000",
+					"background": "#ffc107",
+					"resized": false,
+					"autoExpand": true
+				},
+				"f7bcb13d-2eda-447f-9933-a434bc6ae7a6": {
+					"referencedItemId": "f7bcb13d-2eda-447f-9933-a434bc6ae7a6",
+					"x": 879,
+					"y": 535,
+					"gHeight": 171,
+					"gWidth": 227,
+					"color": "#000000",
+					"background": "#4caf50",
+					"resized": false,
+					"autoExpand": true
+				},
+				"e8c18e26-06f4-4f6e-bf9c-ce268d193796": {
+					"referencedItemId": "e8c18e26-06f4-4f6e-bf9c-ce268d193796",
+					"x": 986,
+					"y": 111,
+					"gHeight": 171,
+					"gWidth": 254,
+					"color": "#000000",
+					"background": "#f44336",
+					"resized": false,
+					"autoExpand": true
+				},
+				"17f1c4e0-55b1-470a-aac1-24212729e674": {
+					"referencedItemId": "17f1c4e0-55b1-470a-aac1-24212729e674",
+					"x": 614,
+					"y": 208,
+					"gHeight": 81,
+					"gWidth": 229,
+					"color": "#000000",
+					"background": "#ffeb3b",
+					"resized": false,
+					"autoExpand": true
+				},
+				"81ff3803-2825-4795-ba8b-5060eb0f03ec": {
+					"referencedItemId": "81ff3803-2825-4795-ba8b-5060eb0f03ec",
+					"x": 505,
+					"y": 443,
+					"gHeight": 99,
+					"gWidth": 232,
+					"color": "#000000",
+					"background": "#ff5722",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd"
+		}
+	},
+	"order": [
+		"10c7b9ec-d8a3-4916-9091-6498353612d0",
+		"f40ee555-c17f-43fc-b053-38c53cf4f55c",
+		"f7bcb13d-2eda-447f-9933-a434bc6ae7a6",
+		"e8c18e26-06f4-4f6e-bf9c-ce268d193796",
+		"17f1c4e0-55b1-470a-aac1-24212729e674",
+		"81ff3803-2825-4795-ba8b-5060eb0f03ec",
+		"8d4ae3ce-6070-4ea1-b79a-b3f9c5ff1c47",
+		"95814d69-1564-4d5b-98a7-5c50cbfbce29",
+		"e49a7775-28b0-4759-a76e-7132511be364",
+		"1a3906c0-da0a-4019-b7a8-3cb5a70da0fa",
+		"3c4c31be-0425-4a1f-bd21-dadb1dbdff2f"
+	]
+}
