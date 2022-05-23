@@ -158,7 +158,18 @@
 					]
 				}
 			],
-			"indexes": [],
+			"indexes": [
+				{
+					"id": "10b16922-abc8-4815-9ca9-29d4ef1a9048",
+					"name": "Books_ix_1",
+					"unique": false,
+					"fulltext": false,
+					"using": "na",
+					"algorithm": "na",
+					"lockoption": "na",
+					"cols": []
+				}
+			],
 			"embeddable": false,
 			"generate": true,
 			"generateCustomCode": true,
@@ -796,6 +807,55 @@
 			"collation": "",
 			"charset": "",
 			"rowformat": "na"
+		},
+		"7f82b57d-fe3c-4dbd-a472-24d5f556532c": {
+			"id": "7f82b57d-fe3c-4dbd-a472-24d5f556532c",
+			"visible": true,
+			"name": "GroupBook- json",
+			"desc": "jsonایجاد گروه کتاب بر اساس نوع داده ",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "7d6c2ca2-5e5b-4cbd-b05b-af30bb1910c7",
+					"name": "GroupID",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false
+				},
+				{
+					"id": "2abd8ae9-c60a-425d-a301-effbd1c2540f",
+					"name": "GroupName",
+					"datatype": "string",
+					"param": "",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"list": false
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "25fe96ea-b1ee-4a03-9dd2-3f8e98e52af1",
+					"name": "Primary key",
+					"isPk": true,
+					"using": "na",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": true,
+			"generate": true,
+			"generateCustomCode": true,
+			"internalColumnIdRef": ""
 		}
 	},
 	"relations": {
@@ -950,7 +1010,7 @@
 		"replaceSpace": "_",
 		"color": "transparent",
 		"sideSelections": true,
-		"isDirty": true,
+		"isDirty": false,
 		"storedin": {
 			"major": 4,
 			"minor": 6,
@@ -981,7 +1041,7 @@
 			"includeSchema": "always",
 			"quotation": "if_needed"
 		},
-		"lastSaved": "5/16/2022",
+		"lastSaved": "Mon May 23 2022 10:33:25 GMT+0430 (Iran Daylight Time)",
 		"writeFileParam": false
 	},
 	"otherObjects": {},
@@ -1000,8 +1060,8 @@
 			"diagramItems": {
 				"10c7b9ec-d8a3-4916-9091-6498353612d0": {
 					"referencedItemId": "10c7b9ec-d8a3-4916-9091-6498353612d0",
-					"x": 140,
-					"y": 156,
+					"x": 149,
+					"y": 125,
 					"gHeight": 172,
 					"gWidth": 284,
 					"color": "#000000",
@@ -1011,8 +1071,8 @@
 				},
 				"f40ee555-c17f-43fc-b053-38c53cf4f55c": {
 					"referencedItemId": "f40ee555-c17f-43fc-b053-38c53cf4f55c",
-					"x": 645,
-					"y": 145,
+					"x": 665,
+					"y": 114,
 					"gHeight": 63,
 					"gWidth": 242,
 					"color": "#000000",
@@ -1022,8 +1082,8 @@
 				},
 				"f7bcb13d-2eda-447f-9933-a434bc6ae7a6": {
 					"referencedItemId": "f7bcb13d-2eda-447f-9933-a434bc6ae7a6",
-					"x": 900,
-					"y": 650,
+					"x": 920,
+					"y": 619,
 					"gHeight": 171,
 					"gWidth": 227,
 					"color": "#000000",
@@ -1033,8 +1093,8 @@
 				},
 				"e8c18e26-06f4-4f6e-bf9c-ce268d193796": {
 					"referencedItemId": "e8c18e26-06f4-4f6e-bf9c-ce268d193796",
-					"x": 1007,
-					"y": 226,
+					"x": 1027,
+					"y": 195,
 					"gHeight": 171,
 					"gWidth": 254,
 					"color": "#000000",
@@ -1044,8 +1104,8 @@
 				},
 				"17f1c4e0-55b1-470a-aac1-24212729e674": {
 					"referencedItemId": "17f1c4e0-55b1-470a-aac1-24212729e674",
-					"x": 635,
-					"y": 323,
+					"x": 655,
+					"y": 292,
 					"gHeight": 81,
 					"gWidth": 229,
 					"color": "#000000",
@@ -1055,12 +1115,23 @@
 				},
 				"81ff3803-2825-4795-ba8b-5060eb0f03ec": {
 					"referencedItemId": "81ff3803-2825-4795-ba8b-5060eb0f03ec",
-					"x": 526,
-					"y": 558,
+					"x": 546,
+					"y": 527,
 					"gHeight": 99,
 					"gWidth": 232,
 					"color": "#000000",
 					"background": "#ff5722",
+					"resized": false,
+					"autoExpand": true
+				},
+				"7f82b57d-fe3c-4dbd-a472-24d5f556532c": {
+					"referencedItemId": "7f82b57d-fe3c-4dbd-a472-24d5f556532c",
+					"x": 120,
+					"y": 415,
+					"gHeight": 63,
+					"gWidth": 203,
+					"color": "#ffffff",
+					"background": "#8bc34a",
 					"resized": false,
 					"autoExpand": true
 				}
