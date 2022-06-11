@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS Books;
+CREATE TABLE Books(
+	ISBN	VARCHAR(10) NOT NULL,
+    Title	VARCHAR(10) NOT NULL,
+    _Page	INT NOT NULL,
+    Price	DECIMAL(15, 0) NOT NULL,
+    EditNo	INT,
+    PrintNo	INT,
+    GroupID	VARCHAR(6) NOT NULL,
+    PRIMARY KEY(ISBN),
+    FOREIGN KEY (GroupID) REFERENCES GroupBook(GRoupID)
+);
