@@ -1,3 +1,4 @@
+
 /* کتاب و ناشر*/
 CREATE VIEW BOOK_PUB AS (
 	SELECT Title AS 'عنوان کتاب', pName 'نام انتشارات'
