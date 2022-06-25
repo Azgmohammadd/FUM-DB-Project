@@ -1,4 +1,3 @@
-
 DROP TABLE IF EXISTS GroupBook;
 CREATE TABLE GroupBook(
 	groupID		VARCHAR(6) NOT NULL,
