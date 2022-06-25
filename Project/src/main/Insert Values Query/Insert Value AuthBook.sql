@@ -24,5 +24,5 @@ INSERT INTO AuthBook VALUES('520620' , '651256' , 86000);
  set SQL_SAFE_UPDATES = 1;
  */
 
-update authors
-set sumpayment = (select sum(payment) from authbook where authbook.atID = authors.atID group by atID);
+/*update authors
+set sumpayment = (select sum(payment) from authbook where authbook.atID = authors.atID group by atID);*/
